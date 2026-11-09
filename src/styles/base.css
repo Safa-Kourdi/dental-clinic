@@ -1,0 +1,173 @@
+:root {
+  --bg: #ffffff;
+  --bg-soft: #f0f9ff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --primary: #0891b2;
+  --primary-dark: #0e7490;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- الأزرار ---------- */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-weight: 700;
+  border: 2px solid var(--primary);
+  transition: transform 0.2s, background 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+}
+
+.btn-outline {
+  color: var(--primary);
+}
+
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* زر صغير (الهيدر، الإلغاء) */
+.nav-btn {
+  padding: 8px 18px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  font-family: inherit;
+  background: transparent;
+}
+
+.nav-btn.btn-primary {
+  background: var(--primary);
+}
+
+/* ---------- الأقسام ---------- */
+.section {
+  padding: 80px 0;
+}
+
+.section-soft {
+  background: var(--bg-soft);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.section-sub {
+  text-align: center;
+  color: var(--muted);
+  max-width: 560px;
+  margin: 0 auto 48px;
+}
+
+.hero,
+.section {
+  scroll-margin-top: 70px;
+}
+
+/* ---------- دائرة التحميل ---------- */
+.loader-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 60px 0;
+}
+
+/* ---------- واتساب العائم ---------- */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25d366;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  z-index: 20;
+  transition: transform 0.2s;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-float svg {
+  font-size: 1.9rem;
+}
+
+/* ---------- الفوتر ---------- */
+.footer {
+  background: #0f172a;
+  color: #94a3b8;
+  text-align: center;
+  padding: 24px 0;
+  font-size: 0.9rem;
+}
+
+/* أيقونة النافذة المنبثقة */
+.dialog-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin: 24px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #cffafe;
+  color: var(--primary);
+}
+
+.dialog-icon svg {
+  font-size: 2rem;
+}
+
+.dialog-icon.danger {
+  background: #fee2e2;
+  color: #dc2626;
+}
